@@ -2,8 +2,8 @@
    "type": "branch",
    "name": "wackamole/drupal-classic",
    "profiles": [
-   {
-       "version":"1.0"
-   }
-   ],
+       {
+           "version":"1.0"
+       }
+   ]
 }
