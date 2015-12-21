@@ -1,9 +1,10 @@
 {
-   "type": "branch",
-   "name": "wackamole/drupal-classic",
-   "profiles": [
-       {
-           "version":"1.0"
-       }
-   ]
+  "type": "branch",
+  "name": "rainmaker/drupal-classic",
+  "downloadBaseUrl": "http://image.rainmaker-dev.com",
+  "profiles": [
+    {
+      "version": "1.0"
+    }
+  ]
 }
