@@ -4,7 +4,24 @@
   "downloadBaseUrl": "http://image.rainmaker-dev.com",
   "profiles": [
     {
-      "version": "1.0"
+      "version": "1.0",
+      "mounts": [
+        {
+          "source": "{{container_rootfs}}/var/www/html",
+          "target": "/export/rainmaker/{{container_name}}",
+          "group": "nfs"
+        },
+        {
+          "source": "/srv/saltstack",
+          "target": "{{container_rootfs}}/srv/saltstack",
+          "group": "bind"
+        }
+      ],
+      "exports": [
+        {
+          "source": "/export/rainmaker/{{container_name}}"
+        }
+      ]
     }
   ]
 }
