@@ -4,7 +4,7 @@
   "downloadBaseUrl": "http://image.rainmaker-dev.com",
   "profiles": [
     {
-      "version": "1.0",
+      "version": "0.1",
       "mounts": [
         {
           "source": "{{container_rootfs}}/var/www/html",
