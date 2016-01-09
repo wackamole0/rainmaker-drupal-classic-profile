@@ -24,7 +24,7 @@ mariadb-packages:
 
 /etc/mysql/my.cnf:
   file.managed:
-    - source: salt://rainmaker/branch/rainmaker/drupal-classic/v1_0/mariadb/files/my.cnf
+    - source: salt://{{ sls|replace(".", "/") }}/files/my.cnf
     - user: root
     - group: root
     - mode: 644

@@ -1,17 +1,15 @@
 include:
   - rainmaker/core/branch/v1_0
-  #- rainmaker/branch/rainmaker/drupal-classic/v1_0/mariadb
-
-/var/www/:
-  file.directory:
-    - user: root
-    - group: root
-    - mode: 755
-    - makedirs: True
-
-/var/www/html:
-  file.directory:
-    - user: rainmaker
-    - group: rainmaker
-    - mode: 755
-    - makedirs: True
+  - .mariadb
+  - .mariadb/drupal
+  - .mariadb/mysqltuner
+  - .apache
+  - .apache/drupal
+  - .php5
+  - .php5/drupal
+  - .java7
+  - .tomcat7
+  - .tomcat7/solr
+  - .tomcat7/solr/drupal
+  - .drush
+  - .composer
