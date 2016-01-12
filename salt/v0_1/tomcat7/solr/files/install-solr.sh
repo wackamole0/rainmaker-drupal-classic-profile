@@ -12,8 +12,6 @@ solr_download_unpacked_path="/tmp/solr-${solr_version}"
 solr_install_path="/opt/solr-${solr_version}"
 solr_war_filename="solr-${solr_version}.war"
 
-exit;
-
 if [ ! -d $solr_install_path ]; then
     wget "$solr_download_url" -O $solr_download_file
     cd /tmp
@@ -63,4 +61,6 @@ if [ ! -d /var/lib/solr ]; then
     chmod go-rwx /var/lib/solr
 fi
 
-unlink $solr_download_file
+if [ -f $solr_download_file ]; then
+    unlink $solr_download_file
+fi

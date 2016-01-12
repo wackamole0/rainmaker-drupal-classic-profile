@@ -11,6 +11,10 @@ drupal_apachesolr_download_url="http://ftp.drupal.org/files/projects/apachesolr-
 drupal_apachesolr_download_file="/tmp/apachesolr-${drupal_apachesolr_version}.tar.gz"
 drupal_apachesolr_core_path="/var/lib/solr/${drupal_solr_corename}"
 
+if [[ -d $drupal_apachesolr_core_path  ]]; then
+    echo "Cannot install core at ${drupal_apachesolr_core_path}. Path already exists!"
+fi
+
 mkdir $drupal_apachesolr_core_path
 rsync -av /opt/solr/example/solr/collection1/ $drupal_apachesolr_core_path/
 echo "name=${drupal_solr_corename}" > $drupal_apachesolr_core_path/core.properties
@@ -21,5 +25,7 @@ tar -xzf $drupal_apachesolr_download_file
 rsync -av /tmp/apachesolr/solr-conf/solr-4.x/ $drupal_apachesolr_core_path/conf/
 chown -R tomcat7:tomcat7 $drupal_apachesolr_core_path
 rm -Rf /tmp/apachesolr
-unlink $drupal_apachesolr_download_file
 
+if [[ -f $drupal_apachesolr_download_file  ]]; then
+    unlink $drupal_apachesolr_download_file
+fi
