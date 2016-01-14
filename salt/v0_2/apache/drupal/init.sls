@@ -8,7 +8,7 @@
 /var/www/html:
   file.directory:
     - user: rainmaker
-    - group: rainmaker
+    - group: www-data
     - mode: 2775
     - makedirs: True
 
