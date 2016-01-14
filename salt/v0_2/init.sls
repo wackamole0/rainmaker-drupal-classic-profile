@@ -5,7 +5,9 @@ include:
   - .mariadb/mysqltuner
   - .apache
   - .apache/drupal
+  - .memcached
   - .php5
+  - .php5/uploadprogress
   - .php5/drupal
   - .java7
   - .tomcat7

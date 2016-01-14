@@ -3,6 +3,7 @@ php5-packages:
     - pkgs:
       - php5-common
       - php5-cli
+      - php5-dev
       - php-apc
       - php5-mysql
       - php5-gd
