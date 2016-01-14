@@ -22,7 +22,7 @@ apache-service:
     - enable: True
     - reload: True
 
-fred:
+add rainmaker to www-data group:
   user.present:
     - name: rainmaker
     - groups:
