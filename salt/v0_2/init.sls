@@ -1,0 +1,15 @@
+include:
+  - rainmaker/core/branch/v1_0
+  - .mariadb
+  - .mariadb/drupal
+  - .mariadb/mysqltuner
+  - .apache
+  - .apache/drupal
+  - .php5
+  - .php5/drupal
+  - .java7
+  - .tomcat7
+  - .tomcat7/solr
+  - .tomcat7/solr/drupal
+  - .drush
+  - .composer
