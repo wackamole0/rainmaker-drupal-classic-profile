@@ -8,6 +8,14 @@ enable apache mod_rewrite:
   cmd.run:
     - name: a2enmod rewrite
 
+/etc/apache2/ports.conf:
+  file.managed:
+    - source: salt://{{ sls|replace(".", "/") }}/files/ports.conf
+    - user: root
+    - group: root
+    - mode: 644
+    - replace: True
+
 /etc/apache2/mods-available/mpm_prefork.conf:
   file.managed:
     - source: salt://{{ sls|replace(".", "/") }}/files/mpm_prefork.conf
